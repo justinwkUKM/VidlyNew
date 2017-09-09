@@ -1,0 +1,19 @@
+﻿@model VidlyNew.Models.Customer
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New Customer</h2>
+
+@using (Html.BeginForm("Create", "Customers"))
+{
+    <div> @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control"})
+    
+    </div>
+
+
+
+}
+
