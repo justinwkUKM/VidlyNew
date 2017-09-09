@@ -54,6 +54,7 @@ namespace Vidly.Controllers
         //1 Add data annotations in the model class
         //2 Use ModelState.isValid to change the flow of the program
         //3 Add validation methods to the form
+        // Checking Github
 
         [HttpPost]
         [ValidateAntiForgeryToken]
