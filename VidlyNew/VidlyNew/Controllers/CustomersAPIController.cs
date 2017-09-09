@@ -17,12 +17,18 @@ namespace VidlyNew.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: api/CustomersAPI
+        /// <summary>
+        /// Gets all customers from the database.
+        /// </summary>
         public IQueryable<Customer> GetCustomers()
         {
             return db.Customers;
         }
 
         // GET: api/CustomersAPI/5
+        /// <summary>
+        /// Gets one customer by its Id.
+        /// </summary>
         [ResponseType(typeof(Customer))]
         public IHttpActionResult GetCustomer(int id)
         {
@@ -36,6 +42,9 @@ namespace VidlyNew.Controllers
         }
 
         // PUT: api/CustomersAPI/5
+        /// <summary>
+        /// Edit the customer by its Id.
+        /// </summary>
         [ResponseType(typeof(void))]
         public IHttpActionResult PutCustomer(int id, Customer customer)
         {
@@ -71,6 +80,9 @@ namespace VidlyNew.Controllers
         }
 
         // POST: api/CustomersAPI
+        /// <summary>
+        /// Create a new customer
+        /// </summary>
         [ResponseType(typeof(Customer))]
         public IHttpActionResult PostCustomer(Customer customer)
         {
@@ -86,6 +98,9 @@ namespace VidlyNew.Controllers
         }
 
         // DELETE: api/CustomersAPI/5
+        /// <summary>
+        /// Delete the customer by its Id.
+        /// </summary>
         [ResponseType(typeof(Customer))]
         public IHttpActionResult DeleteCustomer(int id)
         {

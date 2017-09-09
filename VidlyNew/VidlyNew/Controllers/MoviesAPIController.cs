@@ -17,12 +17,18 @@ namespace VidlyNew.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: api/MoviesAPI
+        /// <summary>
+        /// Get all movies
+        /// </summary>
         public IQueryable<Movie> GetMovies()
         {
             return db.Movies;
         }
 
         // GET: api/MoviesAPI/5
+        /// <summary>
+        /// Get the movie by its Id.
+        /// </summary>
         [ResponseType(typeof(Movie))]
         public IHttpActionResult GetMovie(int id)
         {
@@ -36,6 +42,9 @@ namespace VidlyNew.Controllers
         }
 
         // PUT: api/MoviesAPI/5
+        /// <summary>
+        /// Edit the movie by its Id.
+        /// </summary>
         [ResponseType(typeof(void))]
         public IHttpActionResult PutMovie(int id, Movie movie)
         {
@@ -71,6 +80,9 @@ namespace VidlyNew.Controllers
         }
 
         // POST: api/MoviesAPI
+        /// <summary>
+        /// Create a new movie entry.
+        /// </summary>
         [ResponseType(typeof(Movie))]
         public IHttpActionResult PostMovie(Movie movie)
         {
@@ -86,6 +98,9 @@ namespace VidlyNew.Controllers
         }
 
         // DELETE: api/MoviesAPI/5
+        /// <summary>
+        /// Delete the movie by its Id.
+        /// </summary>
         [ResponseType(typeof(Movie))]
         public IHttpActionResult DeleteMovie(int id)
         {
