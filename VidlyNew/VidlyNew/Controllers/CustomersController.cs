@@ -22,9 +22,10 @@ namespace Vidly.Controllers
 
         public ViewResult Index()
         {   //deferred execution, code not executed by entity framework
-            var customers = _context.Customers.Include(c => c.MembershipType);
+            //var customers = _context.Customers.Include(c => c.MembershipType);
 
-            return View(customers);
+            //return View(customers);
+            return View();
         }
 
         public ActionResult Details(int id)

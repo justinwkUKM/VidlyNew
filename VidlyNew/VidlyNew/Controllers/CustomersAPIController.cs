@@ -88,13 +88,14 @@ namespace VidlyNew.Controllers
         {
             if (!ModelState.IsValid)
             {
+                //throw new HttpResponseException(HttpStatusCode.BadRequest);
                 return BadRequest(ModelState);
             }
 
             db.Customers.Add(customer);
             db.SaveChanges();
-
-            return CreatedAtRoute("DefaultApi", new { id = customer.Id }, customer);
+            //return customer;
+             return CreatedAtRoute("DefaultApi", new { id = customer.Id }, customer);
         }
 
         // DELETE: api/CustomersAPI/5
